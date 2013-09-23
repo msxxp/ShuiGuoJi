@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:icontext="http://schemas.android.com/apk/res/h.h.shuiguoji"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/t2008"
+    android:orientation="vertical" >
+
+                          <h.h.shuiguoji.CardGroupView
+                               android:id="@+id/textView22"
+                               android:layout_width="wrap_content"
+                               android:layout_height="150dp" 
+                               icontext:alignment="align_left" 
+                               />
+
+                          <TextView
+                              android:id="@+id/textView12"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="TextView" />
+                          
+                          <h.h.shuiguoji.CardGroupView
+                               android:id="@+id/textView23"
+                               android:layout_width="wrap_content"
+                               android:layout_height="150dp"
+                               icontext:alignment="align_center"   
+                               />
+
+                          <TextView
+                              android:id="@+id/textView13"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="TextView" />
+    
+                          <h.h.shuiguoji.CardGroupView
+                               android:id="@+id/textView2"
+                               android:layout_width="wrap_content"
+                               icontext:alignment="align_right" 
+                               android:layout_height="150dp"  
+                               />
+
+                          <TextView
+                              android:id="@+id/textView1"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="TextView" />
+                                                    
+                         <h.h.shuiguoji.CardGroupView
+                               android:id="@+id/textView2222"
+                               android:layout_width="wrap_content"
+                               icontext:alignment="align_left" 
+                               android:layout_height="150dp"  
+                               />
+
+                          <ImageButton
+                              android:id="@+id/imageButton1"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:background="@drawable/dapingguo"
+                              android:text="ImageButton" />
+
+</LinearLayout>
