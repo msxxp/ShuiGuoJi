@@ -10,7 +10,7 @@ import android.graphics.Rect;
 import android.graphics.Paint.Style;
 
 
-public  class JCardBuilder
+public  class JCardBuilder implements ICardBuilder
 {
 	public JCardBuilder(Context context)
 	{
@@ -30,6 +30,8 @@ public  class JCardBuilder
 	Random rand = new Random();
 	 
 	int[] ints = new int[11];
+	
+	@Override
 	public void OnDraw(byte cardData, Canvas cvs,Rect rc)
 	{
 		  Paint mPaint = new Paint();

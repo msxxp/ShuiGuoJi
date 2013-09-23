@@ -15,7 +15,7 @@ import android.graphics.Rect;
 import android.util.Log;
 
 
-public  class JCardBuilder2
+public  class JCardBuilder2 implements ICardBuilder
 {
 	public JCardBuilder2(Context context)
 	{
@@ -36,6 +36,8 @@ public  class JCardBuilder2
 	}
 	
 	Bitmap cards;
+	
+	@Override
 	public void OnDraw(byte cardData, Canvas cvs,Rect rc)
 	{
 		if ( cards == null ) return;

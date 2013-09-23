@@ -116,10 +116,20 @@ public class CardGroupView extends View // SurfaceView.thread lock draw
 		onClickedEvents.add( new OnClickListener() );
 		//onClickedEvents.add( new OnClickListener() );
 		
-		//Activity act = (Activity)context;
-		builder = new JCardBuilder2( context );
+		if ( this.isInEditMode() )
+		{
+			builder = new JCardBuilder( context );     // 设计时
+		}
+		else
+		{
+			builder = new JCardBuilder2( context );    // 运行时
+		}
 	}
 
+	public void SetCardBuilder(ICardBuilder aBuilder)
+	{
+	   builder = aBuilder;
+	}
 	//设置间隔
 	
 	//构造函数
@@ -228,7 +238,7 @@ public class CardGroupView extends View // SurfaceView.thread lock draw
 	}
 	
 	// 作图，组装工具.将其抽象为接口，可以更灵活.
-	JCardBuilder2 builder;
+	ICardBuilder builder;
 	
 	@Override 
 	 protected void onDraw(Canvas canvas)
@@ -239,10 +249,13 @@ public class CardGroupView extends View // SurfaceView.thread lock draw
 		 InitCardsArea( GetCurrentSelfArea());
 		 
 		 // draw rects
-		 for(int i = 0 ;i < cardDatas.size();i++)
+		 if ( builder != null )
 		 {
-			 CardData data = cardDatas.get(i);
-			 builder.OnDraw(data.cardData, canvas,data.rc);
-		 } 
+			 for(int i = 0 ;i < cardDatas.size();i++)
+			 {
+				 CardData data = cardDatas.get(i);
+				 builder.OnDraw(data.cardData, canvas,data.rc);
+			 } 
+		 }
 	 } 
 }
